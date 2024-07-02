@@ -4,11 +4,15 @@ from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from dotenv import load_dotenv
 
+#conda activate py38 로 가상환경을 만들어주고 시작
+# 환경변수 값을 가져옵니다.
 load_dotenv()
 slack_bot_token = os.getenv("SLACK_BOT_TOKEN")
 slack_app_token = os.getenv("SLACK_APP_TOKEN")
 print('slack_bot_token : ' + slack_bot_token)
 print('slack_app_token : ' + slack_app_token)
+
+# 앱을 초기화 합니다.
 app = App(token=slack_bot_token)
 
 @app.event("message")
