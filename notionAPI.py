@@ -4,6 +4,7 @@ import json
 import os
 from dotenv import load_dotenv
 
+# 환경변수 불러오기
 load_dotenv()
 # Notion API 키 설정
 notion_api_key = os.getenv("NOTION_API_KEY")
